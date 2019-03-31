@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:hexdisplay-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -23,17 +24,6 @@ F 2 "" H 4050 4050 50  0001 C CNN
 F 3 "74xx/74hc573.pdf" H 4050 4050 50  0001 C CNN
 	1    4050 4050
 	1    0    0    -1  
-$EndComp
-$Comp
-L MCU_Microchip_ATmega:ATmega328P-AU U?
-U 1 1 5C9EBE91
-P 6900 3100
-F 0 "U?" H 6900 3050 50  0000 C CNN
-F 1 "ATmega328P-AU" H 6500 1600 50  0000 C CNN
-F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 6900 3100 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 6900 3100 50  0001 C CNN
-	1    6900 3100
-	-1   0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR?
@@ -71,12 +61,12 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5C9F2658
-P 6900 4600
-F 0 "#PWR?" H 6900 4350 50  0001 C CNN
-F 1 "GND" H 6905 4427 50  0000 C CNN
-F 2 "" H 6900 4600 50  0001 C CNN
-F 3 "" H 6900 4600 50  0001 C CNN
-	1    6900 4600
+P 7400 5300
+F 0 "#PWR?" H 7400 5050 50  0001 C CNN
+F 1 "GND" H 7405 5127 50  0000 C CNN
+F 2 "" H 7400 5300 50  0001 C CNN
+F 3 "" H 7400 5300 50  0001 C CNN
+	1    7400 5300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -255,12 +245,12 @@ Entry Wire Line
 $Comp
 L power:+5V #PWR?
 U 1 1 5C9F0609
-P 6900 1500
-F 0 "#PWR?" H 6900 1350 50  0001 C CNN
-F 1 "+5V" H 6915 1673 50  0000 C CNN
-F 2 "" H 6900 1500 50  0001 C CNN
-F 3 "" H 6900 1500 50  0001 C CNN
-	1    6900 1500
+P 7550 3200
+F 0 "#PWR?" H 7550 3050 50  0001 C CNN
+F 1 "+5V" H 7565 3373 50  0000 C CNN
+F 2 "" H 7550 3200 50  0001 C CNN
+F 3 "" H 7550 3200 50  0001 C CNN
+	1    7550 3200
 	1    0    0    -1  
 $EndComp
 Text Label 2700 2050 0    50   ~ 0
@@ -456,21 +446,21 @@ Entry Wire Line
 Entry Wire Line
 	4700 6500 4800 6600
 Entry Wire Line
-	5900 3500 6000 3600
+	5900 4400 6000 4300
 Entry Wire Line
-	5900 3600 6000 3700
+	5900 4300 6000 4200
 Entry Wire Line
-	5900 3700 6000 3800
+	5900 3700 6000 3600
 Entry Wire Line
-	5900 3800 6000 3900
+	5900 3800 6000 3700
 Entry Wire Line
-	5900 3900 6000 4000
+	5900 3900 6000 3800
 Entry Wire Line
-	5900 4000 6000 4100
+	5900 4000 6000 3900
 Entry Wire Line
-	5900 4100 6000 4200
+	5900 4100 6000 4000
 Entry Wire Line
-	5900 4200 6000 4300
+	5900 4200 6000 4100
 Wire Wire Line
 	4550 1400 4700 1400
 Wire Wire Line
@@ -519,27 +509,6 @@ Wire Wire Line
 	4550 6400 4700 6400
 Wire Wire Line
 	4550 6500 4700 6500
-Entry Wire Line
-	3250 2400 3350 2300
-Entry Wire Line
-	3250 2500 3350 2400
-Entry Wire Line
-	3250 4550 3350 4450
-Entry Wire Line
-	3250 4650 3350 4550
-Entry Wire Line
-	3250 6800 3350 6700
-Entry Wire Line
-	3250 6900 3350 6800
-Entry Wire Line
-	5900 2900 6000 3000
-Entry Wire Line
-	5900 2800 6000 2900
-Entry Wire Line
-	5900 2700 6000 2800
-Wire Bus Line
-	5150 7400 5150 5150
-Connection ~ 5150 5150
 Text Label 4550 1400 0    50   ~ 0
 Q0
 Text Label 4550 1500 0    50   ~ 0
@@ -604,68 +573,6 @@ Text Label 6000 4200 0    50   ~ 0
 Q6
 Text Label 6000 4300 0    50   ~ 0
 Q7
-Text Label 3350 2300 0    50   ~ 0
-LOAD
-Text Label 3350 4450 0    50   ~ 0
-LOAD
-Text Label 3350 6700 0    50   ~ 0
-LOAD
-Text Label 6000 2800 0    50   ~ 0
-LOAD
-Entry Wire Line
-	5900 3000 6000 3100
-Text Label 3350 2400 0    50   ~ 0
-OE0
-Text Label 3350 4550 0    50   ~ 0
-OE1
-Text Label 3350 6800 0    50   ~ 0
-OE2
-Text Label 6000 2900 0    50   ~ 0
-OE0
-Text Label 6000 3000 0    50   ~ 0
-OE1
-Text Label 6000 3100 0    50   ~ 0
-OE2
-Wire Wire Line
-	6000 2800 6300 2800
-Wire Wire Line
-	6000 2900 6300 2900
-Wire Wire Line
-	6000 3000 6300 3000
-Wire Wire Line
-	6000 3100 6300 3100
-Wire Wire Line
-	6000 3600 6300 3600
-Wire Wire Line
-	6000 3700 6300 3700
-Wire Wire Line
-	6000 3800 6300 3800
-Wire Wire Line
-	6000 3900 6300 3900
-Wire Wire Line
-	6000 4000 6300 4000
-Wire Wire Line
-	6000 4100 6300 4100
-Wire Wire Line
-	6000 4200 6300 4200
-Wire Wire Line
-	6000 4300 6300 4300
-Wire Bus Line
-	5150 3000 5150 5150
-Wire Bus Line
-	5150 3000 5150 2650
-Wire Bus Line
-	5150 2650 5900 2650
-Connection ~ 5150 3000
-Wire Bus Line
-	4800 3400 5900 3400
-Connection ~ 4800 3400
-Wire Wire Line
-	3350 2300 3550 2300
-Wire Wire Line
-	3350 2400 3550 2400
-Wire Bus Line
-	3250 3000 5150 3000
 Wire Bus Line
 	3000 1300 3250 1300
 Wire Wire Line
@@ -685,8 +592,6 @@ Wire Wire Line
 Wire Wire Line
 	3350 2100 3550 2100
 Wire Bus Line
-	3250 5150 5150 5150
-Wire Bus Line
 	3250 4400 3000 4400
 Wire Wire Line
 	3350 3550 3550 3550
@@ -705,14 +610,6 @@ Wire Wire Line
 Wire Wire Line
 	3350 4250 3550 4250
 Wire Wire Line
-	3350 4450 3550 4450
-Wire Wire Line
-	3350 4550 3550 4550
-Wire Wire Line
-	3350 6700 3550 6700
-Wire Wire Line
-	3350 6800 3550 6800
-Wire Wire Line
 	3350 5800 3550 5800
 Wire Wire Line
 	3350 5900 3550 5900
@@ -729,21 +626,284 @@ Wire Wire Line
 Wire Wire Line
 	3350 6500 3550 6500
 Wire Bus Line
-	3250 7400 5150 7400
-Wire Bus Line
 	3000 5650 3250 5650
+$Comp
+L Connector:Conn_01x05_Female J?
+U 1 1 5CA0538B
+P 7750 1800
+F 0 "J?" H 7778 1826 50  0000 L CNN
+F 1 "Conn_01x05_Female" H 7778 1735 50  0000 L CNN
+F 2 "" H 7750 1800 50  0001 C CNN
+F 3 "~" H 7750 1800 50  0001 C CNN
+	1    7750 1800
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
-	3250 4550 3250 5150
+	5900 3500 4800 3500
+Connection ~ 4800 3500
+Text HLabel 3450 2300 0    50   Input ~ 0
+LOAD
+Text HLabel 3450 4450 0    50   Input ~ 0
+LOAD
+Text HLabel 3450 6700 0    50   Input ~ 0
+LOAD
+Text HLabel 3450 2400 0    50   Input ~ 0
+OE0
+Text HLabel 3450 4550 0    50   Input ~ 0
+OE1
+Text HLabel 3450 6800 0    50   Input ~ 0
+OE2
+Wire Wire Line
+	3450 2300 3550 2300
+Wire Wire Line
+	3450 2400 3550 2400
+Wire Wire Line
+	3450 4450 3550 4450
+Wire Wire Line
+	3450 4550 3550 4550
+Wire Wire Line
+	3450 6700 3550 6700
+Wire Wire Line
+	3450 6800 3550 6800
+Text HLabel 7450 1800 0    50   Input ~ 0
+MAX7219_DATA
+Text HLabel 7450 1900 0    50   Input ~ 0
+MAX7219_CS
+Text HLabel 7450 2000 0    50   Input ~ 0
+MAX7219_CLK
+Wire Wire Line
+	7450 1800 7550 1800
+Wire Wire Line
+	7450 1900 7550 1900
+Wire Wire Line
+	7450 2000 7550 2000
+$Comp
+L power:GND #PWR?
+U 1 1 5CA96AB9
+P 6700 1750
+F 0 "#PWR?" H 6700 1500 50  0001 C CNN
+F 1 "GND" H 6705 1577 50  0000 C CNN
+F 2 "" H 6700 1750 50  0001 C CNN
+F 3 "" H 6700 1750 50  0001 C CNN
+	1    6700 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5CA98332
+P 7550 1600
+F 0 "#PWR?" H 7550 1450 50  0001 C CNN
+F 1 "+5V" H 7565 1773 50  0000 C CNN
+F 2 "" H 7550 1600 50  0001 C CNN
+F 3 "" H 7550 1600 50  0001 C CNN
+	1    7550 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 1750 6700 1700
+Wire Wire Line
+	6700 1700 7550 1700
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A?
+U 1 1 5CB19097
+P 7350 4200
+F 0 "A?" H 7350 4200 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 7900 3200 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 7500 3250 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 7350 3200 50  0001 C CNN
+	1    7350 4200
+	1    0    0    -1  
+$EndComp
+Text HLabel 6700 4400 0    50   Input ~ 0
+MAX7219_DATA
+Text HLabel 6700 4500 0    50   Input ~ 0
+MAX7219_CS
+Text HLabel 6700 4600 0    50   Input ~ 0
+MAX7219_CLK
+Text HLabel 8000 4200 2    50   Input ~ 0
+LOAD
+Text HLabel 8000 4300 2    50   Input ~ 0
+OE0
+Text HLabel 8000 4400 2    50   Input ~ 0
+OE1
+Text HLabel 8000 4500 2    50   Input ~ 0
+OE2
+Wire Wire Line
+	6700 4400 6850 4400
+Wire Wire Line
+	6700 4500 6850 4500
+Wire Wire Line
+	6700 4600 6850 4600
+Wire Wire Line
+	7850 4200 8000 4200
+Wire Wire Line
+	7850 4300 8000 4300
+Wire Wire Line
+	7850 4400 8000 4400
+Wire Wire Line
+	7850 4500 8000 4500
+Wire Wire Line
+	6000 3600 6850 3600
+Wire Wire Line
+	6000 3700 6850 3700
+Wire Wire Line
+	6000 3800 6850 3800
+Wire Wire Line
+	6000 3900 6850 3900
+Wire Wire Line
+	6000 4000 6850 4000
+Wire Wire Line
+	6000 4100 6850 4100
+Wire Wire Line
+	6000 4200 6850 4200
+Wire Wire Line
+	6000 4300 6850 4300
+Wire Wire Line
+	7350 5200 7350 5300
+Wire Wire Line
+	7350 5300 7400 5300
+Wire Wire Line
+	7450 5200 7450 5300
+Wire Wire Line
+	7450 5300 7400 5300
+Connection ~ 7400 5300
+NoConn ~ 7850 3600
+NoConn ~ 7850 3700
+NoConn ~ 7850 4000
+NoConn ~ 7250 3200
+NoConn ~ 7450 3200
+NoConn ~ 6850 4700
+NoConn ~ 6850 4800
+NoConn ~ 6850 4900
+NoConn ~ 7850 4600
+NoConn ~ 7850 4700
+NoConn ~ 7850 4800
+NoConn ~ 7850 4900
+$Comp
+L power:+5V #PWR?
+U 1 1 5CC034B0
+P 5450 1200
+F 0 "#PWR?" H 5450 1050 50  0001 C CNN
+F 1 "+5V" H 5465 1373 50  0000 C CNN
+F 2 "" H 5450 1200 50  0001 C CNN
+F 3 "" H 5450 1200 50  0001 C CNN
+	1    5450 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C?
+U 1 1 5CC06D05
+P 5450 1450
+F 0 "C?" H 5565 1496 50  0000 L CNN
+F 1 "0.1" H 5565 1405 50  0000 L CNN
+F 2 "" H 5450 1450 50  0001 C CNN
+F 3 "~" H 5450 1450 50  0001 C CNN
+	1    5450 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C?
+U 1 1 5CC07B36
+P 5900 1450
+F 0 "C?" H 6015 1496 50  0000 L CNN
+F 1 "1.0" H 6015 1405 50  0000 L CNN
+F 2 "" H 5900 1450 50  0001 C CNN
+F 3 "~" H 5900 1450 50  0001 C CNN
+	1    5900 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5CC0802E
+P 5450 1700
+F 0 "#PWR?" H 5450 1450 50  0001 C CNN
+F 1 "GND" H 5455 1527 50  0000 C CNN
+F 2 "" H 5450 1700 50  0001 C CNN
+F 3 "" H 5450 1700 50  0001 C CNN
+	1    5450 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 1200 5450 1300
+Wire Wire Line
+	5900 1300 5450 1300
+Connection ~ 5450 1300
+Wire Wire Line
+	5900 1600 5450 1600
+Wire Wire Line
+	5450 1600 5450 1700
+Connection ~ 5450 1600
+$Comp
+L Connector:Conn_01x15_Female J?
+U 1 1 5CC28828
+P 10150 4050
+F 0 "J?" H 10000 4900 50  0000 L CNN
+F 1 "Conn_01x15_Female" H 9750 3250 50  0000 L CNN
+F 2 "" H 10150 4050 50  0001 C CNN
+F 3 "~" H 10150 4050 50  0001 C CNN
+	1    10150 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x15_Female J?
+U 1 1 5CC2ACD5
+P 8850 4050
+F 0 "J?" H 8750 4900 50  0000 C CNN
+F 1 "Conn_01x15_Female" H 8850 3250 50  0000 C CNN
+F 2 "" H 8850 4050 50  0001 C CNN
+F 3 "~" H 8850 4050 50  0001 C CNN
+	1    8850 4050
+	-1   0    0    -1  
+$EndComp
+Entry Wire Line
+	9050 4050 9150 3950
+Entry Wire Line
+	9050 3950 9150 3850
+Entry Wire Line
+	9050 3350 9150 3250
+Entry Wire Line
+	9050 3450 9150 3350
+Entry Wire Line
+	9050 3550 9150 3450
+Entry Wire Line
+	9050 3650 9150 3550
+Entry Wire Line
+	9050 3750 9150 3650
+Entry Wire Line
+	9050 3850 9150 3750
+Text Label 9150 3250 0    50   ~ 0
+Q0
+Text Label 9150 3350 0    50   ~ 0
+Q1
+Text Label 9150 3450 0    50   ~ 0
+Q2
+Text Label 9150 3550 0    50   ~ 0
+Q3
+Text Label 9150 3650 0    50   ~ 0
+Q4
+Text Label 9150 3750 0    50   ~ 0
+Q5
+Text Label 9150 3850 0    50   ~ 0
+Q6
+Text Label 9150 3950 0    50   ~ 0
+Q7
 Wire Bus Line
-	3250 2400 3250 3000
+	5900 3500 5900 2850
 Wire Bus Line
-	3250 6800 3250 7400
-Wire Bus Line
-	5900 2650 5900 3000
-Wire Bus Line
-	5900 3400 5900 4200
-Wire Bus Line
-	4800 1500 4800 3400
+	5900 2850 9150 2850
+Connection ~ 5900 3500
+Text HLabel 9100 4150 2    50   Input ~ 0
+MAX7219_DATA
+Text HLabel 9100 4250 2    50   Input ~ 0
+MAX7219_CS
+Text HLabel 9100 4350 2    50   Input ~ 0
+MAX7219_CLK
+Wire Wire Line
+	9050 4150 9100 4150
+Wire Wire Line
+	9050 4250 9100 4250
+Wire Wire Line
+	9050 4350 9100 4350
 Wire Bus Line
 	3250 1300 3250 2200
 Wire Bus Line
@@ -753,7 +913,13 @@ Wire Bus Line
 Wire Bus Line
 	3250 5650 3250 6400
 Wire Bus Line
+	5900 3500 5900 4400
+Wire Bus Line
+	4800 1500 4800 3500
+Wire Bus Line
+	9150 2850 9150 3950
+Wire Bus Line
 	3000 1300 3000 4400
 Wire Bus Line
-	4800 3400 4800 6600
+	4800 3500 4800 6600
 $EndSCHEMATC
